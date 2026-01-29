@@ -28,3 +28,25 @@ sudo apt install nodejs git -y
 # Cloudflared (外部公開用) のインストール
 sudo apt install cloudflared -y
 
+# Githubからコピー
+git clone https://github.com/SASK-kun/SASK-YT-Client-on-your-server.git
+
+#　コピーしたディレクトリに移動。
+cd sask-yt-home
+
+#　NPMのインストールと実行
+npm install && node server.js
+
+# CloudflaredでURL化
+cloudflared tunnel --url http://localhost:3000
+※localhostのポート番号はログで確認してください。
+（ディフォルトでは3000です。）
+
+Cloudflared実行後、ログ内に```
+```bash
+(日時+日付等) INF |  https://〇〇〇〇〇〇.trycloudflare.com
+```
+と含まれていたら、URLをコピーしてサイトに飛んでください。
+うまくサイトが動いていれば、成功です。
+なお、ページが表示されない場合でも数分開けて再読込すると、
+表示されることもあります。
