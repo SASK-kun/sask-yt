@@ -6,18 +6,19 @@
 ---
 
 ## 🛠 準備するもの
-- Linuxサーバー (Ubuntu推奨)
+- Linux対応サーバーやPC
+- Androidスマートフォンでも可能です。
 - インターネット接続環境
 
 ---
 
-## 🚀 起動方法 (Quick Start)
+## 起動方法
 
 ターミナルを開き、以下のコマンドを順番に実行してください。
 
 ### 1. システムの更新と必須ツールのインストール
-まずは環境を最新の状態にし、Node.js、Git、Cloudflaredをインストールします。
-
+- まずは環境を最新の状態にし、Node.js、Git、Cloudflaredをインストールします。
+- 次に、サーバーの実行をします。
 ```bash
 # パッケージリストの更新とアップグレード
 sudo apt update && sudo apt upgrade -y
@@ -44,8 +45,8 @@ cloudflared tunnel --url http://localhost:3000
 
 Cloudflared実行後、ログ内に
 
-#　(日時+日付等) INF |  https://〇〇〇〇〇〇.trycloudflare.com
-と含まれていたら、URLをコピーしてサイトに飛んでください。
+　(日時+日付等) INF |  https://〇〇〇〇〇〇.trycloudflare.com
+の形式で表示されるため、URLをコピーしてサイトに飛んでください。
 うまくサイトが動いていれば、成功です。
 なお、ページが表示されない場合でも数分開けて再読込すると、
 表示されることもあります。
