@@ -42,10 +42,9 @@ cloudflared tunnel --url http://localhost:3000
 ※localhostのポート番号はログで確認してください。
 （ディフォルトでは3000です。）
 
-Cloudflared実行後、ログ内に```
-```bash
-(日時+日付等) INF |  https://〇〇〇〇〇〇.trycloudflare.com
-```
+Cloudflared実行後、ログ内に
+
+#　(日時+日付等) INF |  https://〇〇〇〇〇〇.trycloudflare.com
 と含まれていたら、URLをコピーしてサイトに飛んでください。
 うまくサイトが動いていれば、成功です。
 なお、ページが表示されない場合でも数分開けて再読込すると、
