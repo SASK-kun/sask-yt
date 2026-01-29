@@ -3,7 +3,7 @@ const localtunnel = require('localtunnel');
 (async () => {
   const tunnel = await localtunnel({ 
     port: 2000, 
-    subdomain: 'sask-tok-yoshida' // ここを好きな名前に
+    subdomain: 'sask-tok-V.1.0
   });
 
   console.log('====================================');
