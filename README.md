@@ -1,30 +1,30 @@
-# SASK-YT-Client-on-your-server
-あなたのサーバー環境下でYTクライアントを実行できます!
+# 📺 SASK-YT-Client-on-your-server
 
-# ・起動方法
-①Terminalにて下記を実行。
-<br>
+
+**あなたのサーバー環境下で自分専用のYouTubeクライアントを実行・公開しましょう！**
+
+---
+
+## 🛠 準備するもの
+- Linuxサーバー (Ubuntu推奨)
+- インターネット接続環境
+
+---
+
+## 🚀 起動方法 (Quick Start)
+
+ターミナルを開き、以下のコマンドを順番に実行してください。
+
+### 1. システムの更新と必須ツールのインストール
+まずは環境を最新の状態にし、Node.js、Git、Cloudflaredをインストールします。
+
+```bash
+# パッケージリストの更新とアップグレード
 sudo apt update && sudo apt upgrade -y
-<br>
-↓
-<br>
-sudo apt install nodejs git -y
-<br>
-↓
-<br>
-sudo apt install cloudflared
-<br>
-↓
-<br>
-mkdir sask && git clone https://github.com/SASK-kun/SASK-YT-Client-on-your-server.git
-<br>
-↓
-<br>
-cd && cd sask/sask-yt-home && npm install && node server.js
-<br>
-↓
-<br>
-cloudflared tunnel --url http://localhost:3000
-<br>
 
-ログ内に出てくる〇〇〇〇〇〇〇〇.trycloudflare.comのリンクを探してコピーする。
+# Node.js と Git のインストール
+sudo apt install nodejs git -y
+
+# Cloudflared (外部公開用) のインストール
+sudo apt install cloudflared -y
+
